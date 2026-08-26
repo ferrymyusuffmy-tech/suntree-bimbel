@@ -1,0 +1,42 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+locale: "id"
+
+collections:
+  - name: "gallery"
+    label: "Galeri Foto"
+    files:
+      - name: "gallery"
+        label: "Daftar Foto Galeri"
+        file: "data/gallery.json"
+        fields:
+          - label: "Foto"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Gambar", name: "image", widget: "image" }
+              - { label: "Keterangan Foto", name: "caption", widget: "string", required: false }
+
+  - name: "blog"
+    label: "Blog"
+    files:
+      - name: "blog"
+        label: "Daftar Artikel Blog"
+        file: "data/posts.json"
+        fields:
+          - label: "Artikel"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Judul Artikel", name: "title", widget: "string" }
+              - { label: "Kategori", name: "category", widget: "string", required: false, hint: "Contoh: Tips Orang Tua, Persiapan Ujian, Cerita SunTree" }
+              - { label: "Ringkasan Singkat", name: "excerpt", widget: "text" }
+              - { label: "Tanggal", name: "date", widget: "string", required: false, hint: "Contoh: 12 Agustus 2026" }
+              - { label: "Gambar Sampul", name: "image", widget: "image", required: false }
