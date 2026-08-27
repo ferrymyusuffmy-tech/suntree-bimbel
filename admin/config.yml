@@ -106,12 +106,11 @@ collections:
               - { label: "Judul Utama", name: "title", widget: "string" }
               - { label: "Kata yang Ditonjolkan (Emas)", name: "title_highlight", widget: "string", hint: "Harus sama persis dengan salah satu kata di Judul Utama" }
               - { label: "Deskripsi Singkat", name: "lead", widget: "text" }
-              - { label: "Foto Latar Belakang Hero", name: "hero_image", widget: "image", required: false, hint: "Foto besar di paling atas halaman" }
+              - { label: "Foto Latar Belakang Hero", name: "hero_image", widget: "image", required: false, hint: "Foto besar di paling atas halaman. Jika Video diisi, video akan tampil menggantikan foto ini." }
+              - { label: "Video Latar Belakang Hero (opsional)", name: "hero_video", widget: "file", required: false, hint: "Upload video (format mp4, ukuran kecil disarankan). Jika diisi, video akan tampil menggantikan foto latar." }
               - { label: "Foto di Kartu Sambutan", name: "welcome_image", widget: "image", required: false, hint: "Foto yang muncul di kartu 'Selamat Datang'" }
-              - { label: "Label Badge Harga", name: "price_tag", widget: "string", hint: "Contoh: Mulai dari" }
-              - { label: "Angka Harga Badge", name: "price_amount", widget: "string", hint: "Contoh: Rp95rb" }
-              - { label: "Satuan Harga Badge", name: "price_period", widget: "string", hint: "Contoh: / bulan" }
-              - { label: "Keterangan Badge", name: "price_from", widget: "string", hint: "Contoh: Program Fokus 1x/minggu" }
+              - { label: "Nama pada Foto Sambutan", name: "welcome_photo_name", widget: "string", hint: "Contoh: Ferry M Yusuf, M.Pd" }
+              - { label: "Jabatan pada Foto Sambutan", name: "welcome_photo_role", widget: "string", hint: "Contoh: Founder SunTree Bimbel" }
               - { label: "Statistik 1 - Angka", name: "stat1_num", widget: "string" }
               - { label: "Statistik 1 - Label", name: "stat1_label", widget: "string" }
               - { label: "Statistik 2 - Angka", name: "stat2_num", widget: "string" }
@@ -130,6 +129,15 @@ collections:
               - { label: "Poin Keunggulan 1", name: "point1", widget: "string" }
               - { label: "Poin Keunggulan 2", name: "point2", widget: "string" }
               - { label: "Poin Keunggulan 3", name: "point3", widget: "string" }
+          - label: "Visi, Misi & Moto"
+            name: "vmm"
+            widget: "object"
+            fields:
+              - { label: "Visi", name: "vision", widget: "text" }
+              - { label: "Misi 1", name: "mission1", widget: "string" }
+              - { label: "Misi 2", name: "mission2", widget: "string" }
+              - { label: "Misi 3", name: "mission3", widget: "string" }
+              - { label: "Moto", name: "motto", widget: "string" }
           - label: "Kenapa Kami"
             name: "why"
             widget: "object"
@@ -195,3 +203,20 @@ collections:
             fields:
               - { label: "Pertanyaan", name: "question", widget: "string" }
               - { label: "Jawaban", name: "answer", widget: "text" }
+
+  - name: "tutors"
+    label: "Daftar Tutor"
+    files:
+      - name: "tutors"
+        label: "Daftar Tutor Pengajar"
+        file: "data/tutors.json"
+        fields:
+          - label: "Tutor"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.subject}}"
+            fields:
+              - { label: "Nama Tutor", name: "name", widget: "string" }
+              - { label: "Mata Pelajaran / Spesialisasi", name: "subject", widget: "string" }
+              - { label: "Bio Singkat", name: "bio", widget: "text" }
+              - { label: "Foto (opsional)", name: "image", widget: "image", required: false }

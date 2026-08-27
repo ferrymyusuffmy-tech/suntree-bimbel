@@ -230,21 +230,27 @@
     min-height:440px;
     display:flex;
     align-items:flex-end;
-    background-image:
-      linear-gradient(180deg, rgba(10,46,44,0.55) 0%, rgba(10,46,44,0.55) 40%, rgba(10,46,44,0.92) 100%),
-      url('assets/pamflet-program.png');
-    background-size:cover;
-    background-position:center top;
+    background:var(--teal-deepest);
     color:#fff;
     padding:120px 0 90px;
+  }
+  .hero-media{
+    position:absolute; inset:0; z-index:0;
+  }
+  .hero-media img, .hero-media video{
+    width:100%; height:100%; object-fit:cover; object-position:center top;
+  }
+  .hero-overlay{
+    position:absolute; inset:0; z-index:1;
+    background:linear-gradient(180deg, rgba(8,32,31,0.62) 0%, rgba(8,32,31,0.68) 45%, rgba(8,32,31,0.95) 100%);
   }
   .hero .wrap{
     position:relative; z-index:2;
   }
   .hero-badge{
     display:inline-block;
-    background:rgba(10,46,44,0.55);
-    border:1px solid rgba(255,255,255,0.25);
+    background:rgba(10,46,44,0.7);
+    border:1px solid rgba(255,255,255,0.3);
     color:#fff;
     font-size:12.5px; font-weight:700; letter-spacing:.03em;
     padding:8px 16px;
@@ -252,18 +258,16 @@
     margin-bottom:18px;
   }
   .hero-copy h1{
-    color:#fff;
+    color:var(--gold-soft);
     font-size:clamp(32px,5.5vw,52px);
     font-weight:900;
     letter-spacing:-.01em;
     max-width:720px;
+    text-shadow:0 3px 16px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.7);
   }
   .hero-copy h1 em{
     font-style:normal;
-    background:linear-gradient(90deg, var(--gold), var(--gold-soft));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
+    color:#fff;
   }
 
   /* ===== WELCOME CARD (menjorok naik menutupi hero) ===== */
@@ -321,6 +325,37 @@
     .welcome-card{grid-template-columns:1fr; padding:32px 24px 0; gap:0;}
     .welcome-photo{margin-top:24px;}
     .welcome-photo-inner{max-width:100%;}
+  }
+
+  /* ===== VISI MISI MOTO ===== */
+  .vmm-grid{
+    margin-top:48px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .vmm-card{
+    background:var(--teal-mist);
+    border-radius:var(--radius);
+    padding:26px 24px;
+  }
+  .vmm-icon{
+    width:48px; height:48px; border-radius:12px;
+    background:linear-gradient(135deg, var(--teal-bright), var(--teal-primary));
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:14px;
+  }
+  .vmm-icon svg{width:22px; height:22px;}
+  .vmm-card h3{font-size:16px; font-weight:800; margin-bottom:8px; color:var(--teal-deepest);}
+  .vmm-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.6;}
+  .vmm-card ul{display:flex; flex-direction:column; gap:8px;}
+  .vmm-card ul li{
+    font-size:13.5px; color:var(--ink-soft); line-height:1.5;
+    padding-left:16px; position:relative;
+  }
+  .vmm-card ul li::before{content:'•'; position:absolute; left:0; color:var(--teal-primary); font-weight:800;}
+  @media (max-width:760px){
+    .vmm-grid{grid-template-columns:1fr;}
   }
 
   /* ===== STATS ===== */
@@ -574,6 +609,61 @@
   }
   .faq-item[open] summary::after{content:'−';}
   .faq-item p{margin-top:12px; font-size:14px; color:var(--ink-soft); line-height:1.6;}
+
+  /* ===== READ MORE ===== */
+  .rm-text{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .rm-text.rm-expanded{
+    display:block;
+    -webkit-line-clamp:unset;
+    overflow:visible;
+  }
+  .rm-btn{
+    display:inline-block;
+    margin-top:6px;
+    background:none; border:none; padding:0;
+    font-size:12.5px; font-weight:700; color:var(--teal-primary);
+    cursor:pointer;
+  }
+  .rm-btn:hover{text-decoration:underline;}
+
+  /* ===== TUTOR ===== */
+  .tutor-section{background:var(--paper);}
+  .tutor-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .tutor-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    text-align:center;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .tutor-card:hover{transform:translateY(-4px); box-shadow:var(--shadow);}
+  .tutor-photo{
+    aspect-ratio:1/1;
+    background:linear-gradient(135deg, var(--teal-primary), var(--teal-deepest));
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+  }
+  .tutor-photo img{width:100%; height:100%; object-fit:cover;}
+  .tutor-photo svg{width:40px; height:40px; color:rgba(255,255,255,0.85);}
+  .tutor-body{padding:18px 16px;}
+  .tutor-body h3{font-size:15px; font-weight:700;}
+  .tutor-body .tutor-subject{
+    display:block; font-size:12px; font-weight:700; color:var(--teal-primary);
+    margin-top:4px;
+  }
+  .tutor-body p{font-size:13px; color:var(--ink-soft); margin-top:8px;}
+  @media (max-width:960px){ .tutor-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:640px){ .tutor-grid{grid-template-columns:1fr;} }
 
   /* ===== ACHIEVEMENTS / PRESTASI & REVIEW ===== */
   .achievements-section{background:var(--paper);}
@@ -875,7 +965,7 @@
         <div class="dropdown-panel">
           <a href="#tentang">Tentang SunTree</a>
           <a href="#kenapa">Kenapa Memilih Kami</a>
-          <a href="#kenapa">Metode Pembelajaran</a>
+          <a href="#tutor">Daftar Tutor</a>
           <a href="#prestasi">Prestasi</a>
           <a href="#prestasi">Testimoni</a>
         </div>
@@ -887,7 +977,15 @@
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="dropdown-panel mega-panel" id="programMegaMenu">
-          <a href="#program">Lihat Semua Program</a>
+          <a href="#program-1">Pelajaran Pokok SD</a>
+          <a href="#program-2">Calistung</a>
+          <a href="#program-3">Pelajaran Pokok SMP</a>
+          <a href="#program-4">Private (di rumah)</a>
+          <a href="#program-5">Program Fokus</a>
+          <a href="#program-6">Les MTK &amp; IPA</a>
+          <a href="#program-7">Persiapan TKA &amp; SNBT</a>
+          <a href="#program-8">Program Intensif</a>
+          <a class="mega-see-all" href="#program">Lihat Semua Program →</a>
         </div>
       </div>
 
@@ -932,18 +1030,22 @@
 
   <!-- HERO -->
   <section class="hero" id="heroSection">
+    <div class="hero-media" id="heroMedia">
+      <img id="heroImage" src="assets/pamflet-program.png" alt="">
+      <video id="heroVideo" autoplay muted loop playsinline style="display:none;"></video>
+    </div>
+    <div class="hero-overlay"></div>
     <div class="wrap">
       <span class="hero-badge" id="heroEyebrow">Bimbel Terpercaya di Cipayung</span>
       <h1 id="heroTitle">Belajar Bersama,<br>Meraih <em>Prestasi</em> Bersama!</h1>
     </div>
   </section>
 
-  <!-- WELCOME CARD -->
   <div class="welcome-wrap">
     <div class="wrap">
       <div class="welcome-card">
         <div class="welcome-copy">
-          <h2>Selamat Datang di SunTree Bimbel</h2>
+          <h2>Selamat Datang di laman resmi SunTree Bimbel</h2>
           <p id="heroLead">SunTree Bimbel mendampingi siswa TK hingga SMA dengan kelas kecil, pengajar berpengalaman, dan metode belajar yang menyenangkan — di Lubang Buaya, Cipayung, Jakarta Timur.</p>
           <div class="hero-actions">
             <a class="btn btn-gold wa-link" id="heroCtaWa" href="https://wa.me/6285591176303?text=Halo%20SunTree%20Bimbel%2C%20saya%20ingin%20jadwalkan%20konsultasi%20%2B%20tes%20gratis." target="_blank" rel="noopener">Jadwalkan Konsultasi Gratis</a>
@@ -952,10 +1054,10 @@
         </div>
         <div class="welcome-photo">
           <div class="welcome-photo-inner">
-            <img id="welcomePhoto" src="assets/pamflet-promo.png" alt="SunTree Bimbel">
+            <img id="welcomePhoto" src="assets/pamflet-promo.png" alt="Ferry M Yusuf, M.Pd - Founder SunTree Bimbel">
             <div class="welcome-photo-tag">
-              <b>SunTree Bimbel</b>
-              <span id="heroPriceCaption">Mulai Rp95rb / bulan</span>
+              <b id="welcomePhotoName">Ferry M Yusuf, M.Pd</b>
+              <span id="welcomePhotoRole">Founder SunTree Bimbel</span>
             </div>
           </div>
         </div>
@@ -963,7 +1065,6 @@
     </div>
   </div>
 
-  <!-- STATS -->
   <section class="stats-section">
     <div class="wrap stats-grid" id="heroStats">
       <div class="stat-box">
@@ -984,8 +1085,6 @@
     </div>
   </section>
 
-
-  <!-- CTA BANNER -->
   <section class="cta-banner">
     <div class="wrap cta-banner-inner">
       <div>
@@ -996,7 +1095,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="section" id="tentang">
     <div class="wrap about">
       <div class="about-visual">
@@ -1009,7 +1107,7 @@
       <div class="about-copy">
         <span class="eyebrow" id="aboutEyebrow">Tentang Kami</span>
         <h2 id="aboutTitle">Rumah belajar kedua untuk putra-putri Anda</h2>
-        <p id="aboutText">SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda — karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.</p>
+        <p class="rm-text" id="aboutText">SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda — karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.</p>
         <ul class="about-list" id="aboutList">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Kurikulum terstruktur &amp; materi selalu diperbarui</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pendekatan personal, bukan kelas massal</li>
@@ -1017,22 +1115,32 @@
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- PROGRAM -->
-  <section class="section" id="program" style="padding-top:0;">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Program Belajar</span>
-        <h2>Pilih program sesuai kebutuhan anak</h2>
-        <p>Delapan pilihan program dari usia TK sampai persiapan masuk kuliah — jadwal fleksibel, biaya transparan.</p>
+      <div class="vmm-grid" id="vmmGrid">
+        <div class="vmm-card">
+          <div class="vmm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Visi</h3>
+          <p class="rm-text" id="vmmVision">Menjadi bimbingan belajar terpercaya yang membentuk generasi cerdas, mandiri, dan berprestasi di lingkungan Cipayung dan sekitarnya.</p>
+        </div>
+        <div class="vmm-card">
+          <div class="vmm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Misi</h3>
+          <ul id="vmmMissionList">
+            <li>Memberikan bimbingan belajar berkualitas dengan metode yang efektif dan menyenangkan.</li>
+            <li>Membangun kedekatan personal antara pengajar dan siswa lewat kelas kecil.</li>
+            <li>Melibatkan orang tua secara aktif dalam memantau perkembangan belajar anak.</li>
+          </ul>
+        </div>
+        <div class="vmm-card">
+          <div class="vmm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 16.9 5.8 20.3l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+          <h3>Moto</h3>
+          <p id="vmmMotto">"Belajar Bersama, Meraih Prestasi Bersama."</p>
+        </div>
       </div>
-
-      <div class="program-grid" id="programGrid"></div>
     </div>
   </section>
 
-  <!-- WHY -->
   <section class="section why-section" id="kenapa">
     <div class="wrap">
       <div class="section-head">
@@ -1074,40 +1182,19 @@
     </div>
   </section>
 
-  <!-- MOMENTS / KEGIATAN -->
-  <section class="section" id="kegiatan">
+  <section class="section tutor-section" id="tutor">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Suasana Belajar</span>
-        <h2>Belajar seru, bukan sekadar setoran nilai</h2>
+        <span class="eyebrow">Tim Pengajar</span>
+        <h2>Daftar Tutor SunTree Bimbel</h2>
+        <p>Diampu oleh pengajar berpengalaman dan berdedikasi di bidangnya masing-masing.</p>
       </div>
-      <div class="moment-grid">
-        <div class="moment-card">
-          <div class="moment-photo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="5" y="9" width="14" height="11" rx="2"/></svg>
-            <span class="moment-tag">Belajar Seru</span>
-          </div>
-          <div class="moment-body"><p>Suasana belajar menyenangkan yang menumbuhkan semangat dan percaya diri siswa.</p></div>
-        </div>
-        <div class="moment-card">
-          <div class="moment-photo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M15.5 20a5 5 0 0 1 6.5-4.8"/></svg>
-            <span class="moment-tag">Teman Baru</span>
-          </div>
-          <div class="moment-body"><p>Bersama teman baru, belajar jadi lebih seru dan penuh kebersamaan.</p></div>
-        </div>
-        <div class="moment-card">
-          <div class="moment-photo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 6.2L21 9l-5 4.4L17.3 20 12 16.6 6.7 20 8 13.4 3 9l6.4-.8z"/></svg>
-            <span class="moment-tag">Prestasi Meningkat</span>
-          </div>
-          <div class="moment-body"><p>Dibimbing sampai paham, siswa jadi lebih siap meraih prestasi terbaiknya.</p></div>
-        </div>
+      <div class="tutor-grid" id="tutorGrid">
+        <div class="gallery-empty">Data tutor belum ditambahkan. Isi lewat panel admin.</div>
       </div>
     </div>
   </section>
 
-  <!-- PRESTASI & REVIEW -->
   <section class="section achievements-section" id="prestasi">
     <div class="wrap">
       <div class="section-head">
@@ -1121,8 +1208,18 @@
     </div>
   </section>
 
+  <section class="section" id="program" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Program Belajar</span>
+        <h2>Pilih program sesuai kebutuhan anak</h2>
+        <p>Delapan pilihan program dari usia TK sampai persiapan masuk kuliah — jadwal fleksibel, biaya transparan.</p>
+      </div>
 
-  <!-- GALLERY -->
+      <div class="program-grid" id="programGrid"></div>
+    </div>
+  </section>
+
   <section class="section gallery-section" id="galeri">
     <div class="wrap">
       <div class="gallery-toolbar">
@@ -1138,7 +1235,6 @@
     </div>
   </section>
 
-  <!-- BROCHURE -->
   <section class="section" id="brosur" style="padding-top:0;">
     <div class="wrap">
       <div class="section-head">
@@ -1171,7 +1267,38 @@
     </div>
   </section>
 
-  <!-- BLOG -->
+  <section class="section" id="kegiatan">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Suasana Belajar</span>
+        <h2>Belajar seru, bukan sekadar setoran nilai</h2>
+      </div>
+      <div class="moment-grid">
+        <div class="moment-card">
+          <div class="moment-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="5" y="9" width="14" height="11" rx="2"/></svg>
+            <span class="moment-tag">Belajar Seru</span>
+          </div>
+          <div class="moment-body"><p>Suasana belajar menyenangkan yang menumbuhkan semangat dan percaya diri siswa.</p></div>
+        </div>
+        <div class="moment-card">
+          <div class="moment-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M15.5 20a5 5 0 0 1 6.5-4.8"/></svg>
+            <span class="moment-tag">Teman Baru</span>
+          </div>
+          <div class="moment-body"><p>Bersama teman baru, belajar jadi lebih seru dan penuh kebersamaan.</p></div>
+        </div>
+        <div class="moment-card">
+          <div class="moment-photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.6 6.2L21 9l-5 4.4L17.3 20 12 16.6 6.7 20 8 13.4 3 9l6.4-.8z"/></svg>
+            <span class="moment-tag">Prestasi Meningkat</span>
+          </div>
+          <div class="moment-body"><p>Dibimbing sampai paham, siswa jadi lebih siap meraih prestasi terbaiknya.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="blog">
     <div class="wrap">
       <div class="section-head">
@@ -1186,7 +1313,6 @@
     </div>
   </section>
 
-  <!-- REGISTER -->
   <section class="section register-section" id="daftar">
     <div class="wrap">
       <div class="register-inner">
@@ -1208,7 +1334,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="section contact-section" id="kontak">
     <div class="wrap">
       <span class="eyebrow">Kontak &amp; Lokasi</span>
@@ -1255,7 +1380,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="section faq-section" id="faq">
     <div class="wrap">
       <div class="section-head">
@@ -1350,6 +1474,27 @@
     });
   });
 
+  // ==== Read More: tampilkan tombol "Baca Selengkapnya" jika teks terpotong ====
+  function applyReadMore(scope) {
+    (scope || document).querySelectorAll('.rm-text').forEach(p => {
+      const next = p.nextElementSibling;
+      if (next && next.classList && next.classList.contains('rm-btn')) return;
+      requestAnimationFrame(() => {
+        if (p.scrollHeight > p.clientHeight + 2) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'rm-btn';
+          btn.textContent = 'Baca Selengkapnya';
+          btn.addEventListener('click', () => {
+            const expanded = p.classList.toggle('rm-expanded');
+            btn.textContent = expanded ? 'Tutup' : 'Baca Selengkapnya';
+          });
+          p.insertAdjacentElement('afterend', btn);
+        }
+      });
+    });
+  }
+
   // ==== Muat Galeri Foto dari data/gallery.json ====
   fetch('data/gallery.json?_=' + Date.now())
     .then(r => r.json())
@@ -1386,10 +1531,11 @@
           <div class="blog-thumb">${post.image ? `<img src="${post.image}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">` : blogIcons.default}</div>
           <span class="blog-cat">${post.category || 'Tips Belajar'}</span>
           <h3>${post.title}</h3>
-          <p>${post.excerpt || ''}</p>
+          <p class="rm-text">${post.excerpt || ''}</p>
           <span class="blog-more">${post.date || ''}</span>
         </div>
       `).join('');
+      applyReadMore(grid);
     })
     .catch(() => { /* biarkan kosong jika file belum ada */ });
 
@@ -1416,6 +1562,12 @@
       if (mega) {
         mega.innerHTML = programs.map((p, i) => `<a href="#program-${i + 1}">${p.title || ''}</a>`).join('')
           + `<a class="mega-see-all" href="#program">Lihat Semua Program →</a>`;
+        mega.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            document.querySelectorAll('.nav-item.open').forEach(i => i.classList.remove('open'));
+          });
+        });
       }
     })
     .catch(() => { /* biarkan tampilan bawaan jika file belum ada */ });
@@ -1436,11 +1588,34 @@
             <span class="achv-badge ${isReview ? 'review' : 'prestasi'}">${isReview ? 'Review Orang Tua' : 'Prestasi Siswa'}</span>
             ${isReview ? `<div class="achv-stars">${starIcon.repeat(5)}</div>` : ''}
             <h3>${item.title || ''}</h3>
-            <p>${item.description || ''}</p>
+            <p class="rm-text">${item.description || ''}</p>
             ${item.name ? `<div class="achv-name">${item.name}</div>` : ''}
           </div>
         `;
       }).join('');
+      applyReadMore(grid);
+    })
+    .catch(() => { /* biarkan tampilan bawaan jika file belum ada */ });
+
+  // ==== Muat Daftar Tutor dari data/tutors.json ====
+  fetch('data/tutors.json?_=' + Date.now())
+    .then(r => r.json())
+    .then(data => {
+      const items = (data && data.items) || [];
+      const grid = document.getElementById('tutorGrid');
+      if (!items.length) return;
+      const personIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>';
+      grid.innerHTML = items.map(t => `
+        <div class="tutor-card">
+          <div class="tutor-photo">${t.image ? `<img src="${t.image}" alt="${(t.name || '').replace(/"/g,'&quot;')}">` : personIcon}</div>
+          <div class="tutor-body">
+            <h3>${t.name || ''}</h3>
+            <span class="tutor-subject">${t.subject || ''}</span>
+            <p class="rm-text">${t.bio || ''}</p>
+          </div>
+        </div>
+      `).join('');
+      applyReadMore(grid);
     })
     .catch(() => { /* biarkan tampilan bawaan jika file belum ada */ });
 
@@ -1487,16 +1662,28 @@
           titleEl.innerHTML = html;
         }
         setText('heroLead', s.hero.lead);
-        const heroSection = document.getElementById('heroSection');
-        if (heroSection && s.hero.hero_image) {
-          heroSection.style.backgroundImage = `linear-gradient(180deg, rgba(10,46,44,0.55) 0%, rgba(10,46,44,0.55) 40%, rgba(10,46,44,0.92) 100%), url('${s.hero.hero_image}')`;
+
+        // Latar belakang Hero: video (jika ada) atau foto
+        const heroImageEl = document.getElementById('heroImage');
+        const heroVideoEl = document.getElementById('heroVideo');
+        if (s.hero.hero_video) {
+          if (heroVideoEl) {
+            heroVideoEl.src = s.hero.hero_video;
+            heroVideoEl.style.display = 'block';
+          }
+          if (heroImageEl) heroImageEl.style.display = 'none';
+        } else if (s.hero.hero_image) {
+          if (heroImageEl) {
+            heroImageEl.src = s.hero.hero_image;
+            heroImageEl.style.display = 'block';
+          }
+          if (heroVideoEl) heroVideoEl.style.display = 'none';
         }
+
         const welcomePhoto = document.getElementById('welcomePhoto');
         if (welcomePhoto && s.hero.welcome_image) welcomePhoto.src = s.hero.welcome_image;
-        const captionEl = document.getElementById('heroPriceCaption');
-        if (captionEl && s.hero.price_amount) {
-          captionEl.textContent = (s.hero.price_tag || 'Mulai dari') + ' ' + s.hero.price_amount + ' ' + (s.hero.price_period || '');
-        }
+        setText('welcomePhotoName', s.hero.welcome_photo_name);
+        setText('welcomePhotoRole', s.hero.welcome_photo_role);
         const statsEl = document.getElementById('heroStats');
         if (statsEl && s.hero.stat1_num) {
           const boxes = statsEl.querySelectorAll('.stat-box');
@@ -1527,6 +1714,18 @@
           list.innerHTML = [s.about.point1, s.about.point2, s.about.point3]
             .filter(Boolean)
             .map(pt => `<li>${checkIcon}${pt}</li>`).join('');
+        }
+      }
+
+      // Visi, Misi, Moto
+      if (s.vmm) {
+        setText('vmmVision', s.vmm.vision);
+        setText('vmmMotto', s.vmm.motto);
+        const missionList = document.getElementById('vmmMissionList');
+        if (missionList && (s.vmm.mission1 || s.vmm.mission2 || s.vmm.mission3)) {
+          missionList.innerHTML = [s.vmm.mission1, s.vmm.mission2, s.vmm.mission3]
+            .filter(Boolean)
+            .map(m => `<li>${m}</li>`).join('');
         }
       }
 
@@ -1569,6 +1768,7 @@
           if (contactLink) contactLink.href = 'https://wa.me/' + s.contact.whatsapp_number;
         }
       }
+      applyReadMore(document);
     })
     .catch(() => { /* biarkan teks bawaan jika file belum ada */ });
 </script>
