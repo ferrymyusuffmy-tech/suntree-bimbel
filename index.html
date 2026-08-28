@@ -257,88 +257,17 @@
     border-radius:6px;
     margin-bottom:18px;
   }
-  /* =========================================================
-   SUNTREE BIMBEL
-   HERO TITLE — GOLD FIX
-   ========================================================= */
-
-/* Judul utama Hero */
-#heroTitle{
-    color: #E8A93B !important;
-
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(32px, 5.5vw, 52px);
-    font-weight: 900;
-    line-height: 1.15;
-
-    letter-spacing: -0.01em;
-
-    max-width: 720px;
-
-    margin: 0;
-
-    /* Efek bayangan agar Gold tetap terlihat jelas
-       di atas foto/video */
-    text-shadow:
-        0 3px 16px rgba(0,0,0,0.60),
-        0 1px 4px rgba(0,0,0,0.70);
-}
-
-
-/* =========================================================
-   KATA HIGHLIGHT <em>
-   Contoh: Prestasi
-   ========================================================= */
-
-#heroTitle em{
-    color: #E8A93B !important;
-
-    font-style: normal;
-    font-weight: 900;
-
-    text-shadow:
-        0 3px 16px rgba(0,0,0,0.60),
-        0 1px 4px rgba(0,0,0,0.70);
-}
-
-
-/* =========================================================
-   PASTIKAN SEMUA TEKS DI DALAM HERO TITLE GOLD
-   ========================================================= */
-
-#heroTitle,
-#heroTitle span,
-#heroTitle strong,
-#heroTitle b,
-#heroTitle em{
-    color: #E8A93B !important;
-}
-
-
-/* =========================================================
-   RESPONSIVE TABLET
-   ========================================================= */
-
-@media (max-width: 960px){
-
-    #heroTitle{
-        font-size: clamp(30px, 6vw, 46px);
-        max-width: 680px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE HP
-   ========================================================= */
-
-@media (max-width: 640px){
-
-    #heroTitle{
-        font-size: clamp(28px, 8vw, 38px);
-        line-height: 1.15;
-        max-width: 100%;
+  .hero-copy h1{
+    color:var(--gold-soft);
+    font-size:clamp(32px,5.5vw,52px);
+    font-weight:900;
+    letter-spacing:-.01em;
+    max-width:720px;
+    text-shadow:0 3px 16px rgba(0,0,0,0.6), 0 1px 4px rgba(0,0,0,0.7);
+  }
+  .hero-copy h1 em{
+    font-style:normal;
+    color:#fff;
   }
 
   /* ===== WELCOME CARD (menjorok naik menutupi hero) ===== */
