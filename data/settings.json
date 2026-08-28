@@ -1,28 +1,28 @@
 {
   "branding": {
-    "logo": "assets/uploads/picture1.png"
+    "logo": ""
   },
   "hero": {
+    "eyebrow": "Bimbel Terpercaya di Cipayung",
+    "title": "Belajar Bersama, Meraih Prestasi Bersama!",
+    "title_highlight": "Prestasi",
+    "lead": "SunTree Bimbel mendampingi siswa TK hingga SMA dengan kelas kecil, pengajar berpengalaman, dan metode belajar yang menyenangkan — di Lubang Buaya, Cipayung, Jakarta Timur.",
+    "hero_image": "assets/pamflet-program.png",
+    "hero_video": "",
+    "welcome_image": "assets/pamflet-promo.png",
+    "welcome_photo_name": "Ferry M Yusuf, M.Pd",
     "welcome_photo_role": "Founder SunTree Bimbel",
     "stat1_num": "9",
-    "stat2_num": "8",
-    "stat3_num": "TK–SMA",
-    "eyebrow": "Bimbel Terpercaya",
-    "title_highlight": "Prestasi",
     "stat1_label": "Maks. siswa / kelas",
+    "stat2_num": "8",
     "stat2_label": "Pilihan program belajar",
-    "stat3_label": "Semua jenjang dilayani",
-    "welcome_photo_name": "Ferry M Yusuf, M.Pd",
-    "hero_image": "assets/pamflet-program.png",
-    "hero_video": "assets/uploads/lv_0_20260828103859-1-1-1-1-1-1-.mp4",
-    "title": "Belajar Bersama, Meraih Prestasi Bersama!",
-    "lead": "SunTree Bimbel mendampingi siswa TK hingga SMA dengan kelas kecil, pengajar berpengalaman, dan metode belajar yang menyenangkan — di Lubang Buaya, Cipayung, Jakarta Timur.",
-    "welcome_image": "assets/uploads/chatgpt-image-28-agu-2026-05.32.43.png"
+    "stat3_num": "TK–SMA",
+    "stat3_label": "Semua jenjang dilayani"
   },
   "about": {
     "eyebrow": "Tentang Kami",
     "title": "Rumah belajar kedua untuk putra-putri Anda",
-    "text": "SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda, karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.",
+    "text": "SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda — karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.",
     "badge_year": "2026",
     "badge_text": "Melayani keluarga di Cipayung & sekitarnya",
     "point1": "Kurikulum terstruktur & materi selalu diperbarui",
@@ -31,19 +31,19 @@
   },
   "why": {
     "eyebrow": "Kenapa SunTree Bimbel?",
-    "item6_desc": "Latihan soal rutin agar siswa lebih siap menghadapi ujian sekolah.",
-    "item5_desc": "Bingung pilih program yang cocok? Konsultasikan dulu, tanpa biaya.",
-    "item4_desc": "Orang tua mendapat gambaran perkembangan belajar anak secara berkala.",
-    "item3_desc": "Kelas kecil membuat setiap anak benar-benar diperhatikan, bukan sekadar ikut kelas.",
-    "item2_desc": "Materi disusun bertahap dan selalu diperbarui mengikuti kurikulum sekolah terkini.",
-    "item1_desc": "Diampu oleh pengajar profesional yang terbiasa mendampingi siswa dari berbagai jenjang.",
-    "item1_title": "Pengajar Berpengalaman",
-    "item2_title": "Kurikulum Terstruktur",
     "title": "Belajar jadi lebih terarah & menyenangkan",
+    "item1_title": "Pengajar Berpengalaman",
+    "item1_desc": "Diampu oleh pengajar profesional yang terbiasa mendampingi siswa dari berbagai jenjang.",
+    "item2_title": "Kurikulum Terstruktur",
+    "item2_desc": "Materi disusun bertahap dan selalu diperbarui mengikuti kurikulum sekolah terkini.",
     "item3_title": "Metode Efektif & Personal",
+    "item3_desc": "Kelas kecil membuat setiap anak benar-benar diperhatikan, bukan sekadar ikut kelas.",
     "item4_title": "Monitoring Perkembangan",
+    "item4_desc": "Orang tua mendapat gambaran perkembangan belajar anak secara berkala.",
     "item5_title": "Konsultasi Gratis",
-    "item6_title": "Try Out PTS & PAS"
+    "item5_desc": "Bingung pilih program yang cocok? Konsultasikan dulu, tanpa biaya.",
+    "item6_title": "Try Out PTS & PAS",
+    "item6_desc": "Latihan soal rutin agar siswa lebih siap menghadapi ujian sekolah."
   },
   "vmm": {
     "vision": "Menjadi bimbingan belajar terpercaya yang membentuk generasi cerdas, mandiri, dan berprestasi di lingkungan Cipayung dan sekitarnya.",
