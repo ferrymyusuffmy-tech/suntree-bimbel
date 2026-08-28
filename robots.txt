@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://suntreebimbel.netlify.app/sitemap.xml
+Sitemap: https://ferrymyusuffmy-tech.github.io/suntree-bimbel/sitemap.xml
