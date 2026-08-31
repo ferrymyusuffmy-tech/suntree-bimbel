@@ -1,3 +1,12 @@
 {
-  "photos": []
+  "photos": [
+    {
+      "image": "assets/uploads/chatgpt-image-26-agu-2026-22.56.07.png",
+      "caption": "Kegiatan Pembelajaran"
+    },
+    {
+      "image": "assets/uploads/whatsapp-image-2026-08-16-at-11.58.16.jpeg",
+      "caption": "Pembelajaran Di Kelas"
+    }
+  ]
 }
