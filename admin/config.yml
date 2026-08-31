@@ -60,7 +60,7 @@ collections:
             fields:
               - { label: "Judul Artikel", name: "title", widget: "string" }
               - { label: "Kategori", name: "category", widget: "string", required: false, hint: "Contoh: Tips Orang Tua, Persiapan Ujian, Cerita SunTree" }
-              - { label: "Ringkasan Singkat", name: "excerpt", widget: "text" }
+              - { label: "Ringkasan Singkat", name: "excerpt", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Tanggal", name: "date", widget: "string", required: false, hint: "Contoh: 12 Agustus 2026" }
               - { label: "Gambar Sampul", name: "image", widget: "image", required: false }
 
@@ -263,7 +263,7 @@ collections:
             fields:
               - { label: "Label Kecil", name: "eyebrow", widget: "string" }
               - { label: "Judul", name: "title", widget: "string" }
-              - { label: "Paragraf Deskripsi", name: "text", widget: "text" }
+              - { label: "Paragraf Deskripsi", name: "text", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Badge - Tahun", name: "badge_year", widget: "string" }
               - { label: "Badge - Teks", name: "badge_text", widget: "string" }
               - { label: "Poin Keunggulan 1", name: "point1", widget: "string" }
@@ -273,7 +273,7 @@ collections:
             name: "vmm"
             widget: "object"
             fields:
-              - { label: "Visi", name: "vision", widget: "text" }
+              - { label: "Visi", name: "vision", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Misi 1", name: "mission1", widget: "string" }
               - { label: "Misi 2", name: "mission2", widget: "string" }
               - { label: "Misi 3", name: "mission3", widget: "string" }
@@ -325,7 +325,7 @@ collections:
                   - { label: "Prestasi Siswa", value: "prestasi" }
                   - { label: "Review Orang Tua", value: "review" }
               - { label: "Judul / Kutipan", name: "title", widget: "string", hint: "Untuk prestasi: nama pencapaian. Untuk review: kutipan singkat." }
-              - { label: "Deskripsi / Isi Lengkap", name: "description", widget: "text" }
+              - { label: "Deskripsi / Isi Lengkap", name: "description", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Nama (khusus Review)", name: "name", widget: "string", required: false, hint: "Contoh: Ibu Rina, Wali Murid SD" }
               - { label: "Foto / Sertifikat (opsional)", name: "image", widget: "image", required: false }
 
@@ -342,7 +342,7 @@ collections:
             summary: "{{fields.question}}"
             fields:
               - { label: "Pertanyaan", name: "question", widget: "string" }
-              - { label: "Jawaban", name: "answer", widget: "text" }
+              - { label: "Jawaban", name: "answer", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
 
   - name: "tutors"
     label: "Daftar Tutor"
@@ -358,5 +358,5 @@ collections:
             fields:
               - { label: "Nama Tutor", name: "name", widget: "string" }
               - { label: "Mata Pelajaran / Spesialisasi", name: "subject", widget: "string" }
-              - { label: "Bio Singkat", name: "bio", widget: "text" }
+              - { label: "Bio Singkat", name: "bio", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Foto (opsional)", name: "image", widget: "image", required: false }

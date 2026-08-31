@@ -199,7 +199,7 @@
       <div class="about-copy">
         <span class="eyebrow" id="aboutEyebrow">Tentang Kami</span>
         <h2 id="aboutTitle">Rumah belajar kedua untuk putra-putri Anda</h2>
-        <p class="rm-text" id="aboutText">SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda — karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.</p>
+        <div class="rm-block" id="aboutText"><p>SunTree Bimbel hadir sebagai bimbingan belajar terpercaya untuk siswa TK, SD, SMP, hingga SMA. Kami percaya setiap anak punya potensi yang berbeda — karena itu kelas dibuat kecil, materi disesuaikan jenjang, dan pengajar kami mendampingi sampai anak benar-benar paham.</p></div>
         <ul class="about-list" id="aboutList">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Kurikulum terstruktur &amp; materi selalu diperbarui</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Pendekatan personal, bukan kelas massal</li>
@@ -213,7 +213,7 @@
         <div class="vmm-card">
           <div class="vmm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <h3>Visi</h3>
-          <p class="rm-text" id="vmmVision">Menjadi bimbingan belajar terpercaya yang membentuk generasi cerdas, mandiri, dan berprestasi di lingkungan Cipayung dan sekitarnya.</p>
+          <div class="rm-block" id="vmmVision"><p>Menjadi bimbingan belajar terpercaya yang membentuk generasi cerdas, mandiri, dan berprestasi di lingkungan Cipayung dan sekitarnya.</p></div>
         </div>
         <div class="vmm-card">
           <div class="vmm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
@@ -618,6 +618,16 @@
     });
   });
 
+  // ==== Pecah teks jadi paragraf: setiap baris baru (Enter) di admin = paragraf baru ====
+  function toParagraphs(text) {
+    return (text || '')
+      .split(/\n+/)
+      .map(t => t.trim())
+      .filter(Boolean)
+      .map(t => `<p>${t}</p>`)
+      .join('');
+  }
+
   // ==== Read More: tampilkan tombol "Baca Selengkapnya" jika teks terpotong ====
   function applyReadMore(scope) {
     (scope || document).querySelectorAll('.rm-text, .rm-block').forEach(p => {
@@ -675,7 +685,7 @@
           <div class="blog-thumb">${post.image ? `<img src="${post.image}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">` : blogIcons.default}</div>
           <span class="blog-cat">${post.category || 'Tips Belajar'}</span>
           <h3>${post.title}</h3>
-          <p class="rm-text">${post.excerpt || ''}</p>
+          <div class="rm-block">${toParagraphs(post.excerpt)}</div>
           <span class="blog-more">${post.date || ''}</span>
         </div>
       `).join('');
@@ -715,7 +725,7 @@
             <span class="achv-badge ${isReview ? 'review' : 'prestasi'}">${isReview ? 'Review Orang Tua' : 'Prestasi Siswa'}</span>
             ${isReview ? `<div class="achv-stars">${starIcon.repeat(5)}</div>` : ''}
             <h3>${item.title || ''}</h3>
-            <p class="rm-text">${item.description || ''}</p>
+            <div class="rm-block">${toParagraphs(item.description)}</div>
             ${item.name ? `<div class="achv-name">${item.name}</div>` : ''}
           </div>
         `;
@@ -738,7 +748,7 @@
           <div class="tutor-body">
             <h3>${t.name || ''}</h3>
             <span class="tutor-subject">${t.subject || ''}</span>
-            <p class="rm-text">${t.bio || ''}</p>
+            <div class="rm-block">${toParagraphs(t.bio)}</div>
           </div>
         </div>
       `).join('');
@@ -756,7 +766,7 @@
       list.innerHTML = items.map((item, i) => `
         <details class="faq-item" ${i === 0 ? 'open' : ''}>
           <summary>${item.question || ''}</summary>
-          <p>${item.answer || ''}</p>
+          ${toParagraphs(item.answer)}
         </details>
       `).join('');
     })
@@ -789,13 +799,7 @@
           titleEl.innerHTML = html;
         }
         const leadEl = document.getElementById('heroLead');
-        if (leadEl && s.hero.lead) {
-          const finalParts = s.hero.lead
-            .split(/\n+/)
-            .map(t => t.trim())
-            .filter(Boolean);
-          leadEl.innerHTML = finalParts.map(t => `<p>${t}</p>`).join('');
-        }
+        if (leadEl && s.hero.lead) leadEl.innerHTML = toParagraphs(s.hero.lead);
 
         // Latar belakang Hero: video (jika ada) atau foto
         const heroImageEl = document.getElementById('heroImage');
@@ -841,7 +845,8 @@
         if (badgeText && s.about.badge_text) badgeText.innerHTML = s.about.badge_text;
         setText('aboutEyebrow', s.about.eyebrow);
         setText('aboutTitle', s.about.title);
-        setText('aboutText', s.about.text);
+        const aboutTextEl = document.getElementById('aboutText');
+        if (aboutTextEl && s.about.text) aboutTextEl.innerHTML = toParagraphs(s.about.text);
         const list = document.getElementById('aboutList');
         if (list && (s.about.point1 || s.about.point2 || s.about.point3)) {
           const checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ';
@@ -853,7 +858,8 @@
 
       // Visi, Misi, Moto
       if (s.vmm) {
-        setText('vmmVision', s.vmm.vision);
+        const visionEl = document.getElementById('vmmVision');
+        if (visionEl && s.vmm.vision) visionEl.innerHTML = toParagraphs(s.vmm.vision);
         setText('vmmMotto', s.vmm.motto);
         const missionList = document.getElementById('vmmMissionList');
         if (missionList && (s.vmm.mission1 || s.vmm.mission2 || s.vmm.mission3)) {

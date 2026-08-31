@@ -1,27 +1,27 @@
 {
   "tk_paud": {
-    "image": "assets/uploads/chatgpt-image-aug-31-2026-10_33_26-am.png",
+    "image": "",
     "name": "TK / PAUD",
     "desc": "Program belajar menyenangkan untuk membangun kemampuan dasar dan kesiapan belajar anak.",
     "meeting": "1× / 2× per minggu",
-    "duration": "1 Jam / Pertemuan"
+    "duration": "1,5 Jam / Pertemuan"
   },
   "sd": {
-    "image": "assets/uploads/chatgpt-image-aug-31-2026-10_34_13-am.png",
+    "image": "",
     "name": "SD",
     "desc": "Program belajar terarah untuk memperkuat pemahaman, nilai, dan prestasi siswa.",
     "meeting": "1× / 2× per minggu",
     "duration": "1,5 Jam / Pertemuan"
   },
   "smp": {
-    "image": "assets/uploads/chatgpt-image-aug-31-2026-10_36_59-am.png",
+    "image": "",
     "name": "SMP",
     "desc": "Program belajar untuk memperkuat pemahaman materi dan meningkatkan prestasi akademik.",
     "meeting": "1× / 2× per minggu",
     "duration": "1,5 Jam / Pertemuan"
   },
   "sma": {
-    "image": "assets/uploads/chatgpt-image-aug-31-2026-10_37_38-am.png",
+    "image": "",
     "name": "SMA",
     "desc": "Program belajar untuk meningkatkan prestasi, persiapan ujian, TKA, dan masuk perguruan tinggi.",
     "meeting": "1× / 2× per minggu",

@@ -1,55 +1,29 @@
 {
-  "paket1_dur": "1,5 Jam / Pertemuan",
-  "paket2_dur": "1,5 Jam / Pertemuan",
+  "title": "PROGRAM SMP",
   "intro": "Program belajar untuk memperkuat pemahaman materi dan meningkatkan prestasi akademik.",
-  "paket2_freq": "2× / minggu",
-  "paket1_freq": "1× / minggu",
   "programs": [
     {
       "name": "SMP Smart",
-      "focus": [
-        "Matematika",
-        "Bahasa Indonesia",
-        "Bahasa Inggris",
-        "IPA",
-        "IPS",
-        "Pendidikan Pancasila"
-      ]
+      "focus": ["Matematika", "Bahasa Indonesia", "Bahasa Inggris", "IPA", "IPS", "Pendidikan Pancasila"]
     },
     {
       "name": "SMP Boost",
-      "focus": [
-        "Penguatan konsep",
-        "Materi yang belum dikuasai",
-        "Latihan soal bertingkat",
-        "Soal HOTS",
-        "Evaluasi perkembangan"
-      ]
+      "focus": ["Penguatan konsep", "Materi yang belum dikuasai", "Latihan soal bertingkat", "Soal HOTS", "Evaluasi perkembangan"]
     },
     {
       "name": "SMP Focus",
-      "focus": [
-        "Matematika",
-        "IPA",
-        "Penalaran",
-        "Pemecahan masalah",
-        "Latihan soal"
-      ]
+      "focus": ["Matematika", "IPA", "Penalaran", "Pemecahan masalah", "Latihan soal"]
     },
     {
       "name": "SMP Exam Ready",
-      "focus": [
-        "Persiapan PTS",
-        "Persiapan PAS",
-        "Ujian",
-        "Review materi",
-        "Latihan soal",
-        "Simulasi"
-      ]
+      "focus": ["Persiapan PTS", "Persiapan PAS", "Ujian", "Review materi", "Latihan soal", "Simulasi"]
     }
   ],
-  "paket1_price": "Rp130.000/bulan",
+  "paket1_freq": "1× / minggu",
+  "paket1_dur": "1,5 Jam / Pertemuan",
+  "paket1_price": "Rp120.000/bulan",
+  "paket2_freq": "2× / minggu",
+  "paket2_dur": "1,5 Jam / Pertemuan",
   "paket2_price": "Rp250.000/bulan",
-  "title": "PROGRAM SMP",
   "khusus": []
 }
