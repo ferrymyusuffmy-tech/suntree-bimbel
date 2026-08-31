@@ -1,22 +1,28 @@
 {
   "items": [
     {
-      "name": "Kak Fitri",
-      "subject": "Matematika & IPA",
-      "bio": "Berpengalaman mengajar Matematika dan IPA untuk jenjang SD-SMP selama beberapa tahun, dengan pendekatan yang sabar dan mudah dipahami siswa.",
-      "image": ""
+      "name": "Kak Ferry",
+      "subject": "Tutor Matematika & IPA",
+      "bio": "Lulusan S2 Pendidikan Matematika dan MIPA dengan pengalaman lebih dari 5 tahun dalam dunia pendidikan dan pengajaran. Berpengalaman mengajar peserta didik pada jenjang SD, SMP, hingga SMA dengan pendekatan pembelajaran yang interaktif, sistematis, dan disesuaikan dengan kebutuhan serta kemampuan setiap siswa.\n\nMemiliki komitmen untuk membantu siswa memahami konsep secara mendalam, meningkatkan kemampuan akademik, membangun kepercayaan diri, serta mencapai hasil belajar yang optimal.",
+      "image": "assets/uploads/chatgpt-image-30-agu-2026-14.34.56.png"
     },
     {
-      "name": "Kak Dimas",
-      "subject": "Bahasa Inggris",
-      "bio": "Fokus mengajar Bahasa Inggris dengan metode interaktif agar siswa lebih percaya diri berbicara dan menulis.",
-      "image": ""
+      "name": "Kak Nadiya",
+      "subject": "Tutor PAUD & Anak Usia Dini",
+      "bio": "Lulusan Program Studi Pendidikan Guru Pendidikan Anak Usia Dini (PG PAUD), Universitas Negeri Jakarta (UNJ). Memiliki pengalaman dalam mengajar dan mendampingi anak usia dini dengan pendekatan yang menyenangkan, interaktif, dan sesuai dengan tahap perkembangan anak.\n\nBerkomitmen membantu anak mengembangkan kemampuan dasar, kemandirian, kreativitas, serta rasa percaya diri melalui proses pembelajaran yang positif dan menyenangkan.",
+      "image": "assets/uploads/chatgpt-image-30-agu-2026-14.42.44.png"
     },
     {
-      "name": "Kak Salsa",
-      "subject": "Calistung & SD",
-      "bio": "Berpengalaman mendampingi anak usia dini belajar membaca, menulis, dan berhitung dengan cara yang menyenangkan.",
-      "image": ""
+      "name": "Kak Ibas",
+      "subject": "Tutor IPS & Sejarah",
+      "bio": "Lulusan Pendidikan Sejarah, Universitas Negeri Jakarta (UNJ) dengan pengalaman dalam mengajar dan mendampingi siswa. Memiliki gaya mengajar yang asik, komunikatif, interaktif, dan mudah dipahami, sehingga pembelajaran Sejarah dan IPS terasa lebih menarik dan tidak membosankan.\n\nSenang membangun suasana belajar yang santai namun tetap fokus, serta mendorong siswa untuk aktif berdiskusi, berpikir kritis, dan memahami materi melalui cara yang menyenangkan.",
+      "image": "assets/uploads/xcvsd.png"
+    },
+    {
+      "name": "Mr. Julang",
+      "subject": "Tutor Bahasa Inggris",
+      "bio": "Lulusan Universitas Negeri Jakarta (UNJ) dengan pengalaman mengajar dan mendampingi siswa dalam proses belajar Bahasa Inggris. \n\nMemiliki gaya mengajar yang asik, komunikatif, interaktif, dan mudah dipahami, sehingga belajar Bahasa Inggris terasa lebih menyenangkan dan tidak membosankan. \n\nSenang menciptakan suasana belajar yang santai namun tetap fokus, serta mendorong siswa untuk berani berbicara, aktif berkomunikasi, dan membangun kepercayaan diri dalam menggunakan Bahasa Inggris.",
+      "image": "assets/uploads/chatgpt-image-aug-30-2026-11_07_52-pm.png"
     }
   ]
 }
