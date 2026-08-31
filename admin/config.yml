@@ -64,27 +64,167 @@ collections:
               - { label: "Tanggal", name: "date", widget: "string", required: false, hint: "Contoh: 12 Agustus 2026" }
               - { label: "Gambar Sampul", name: "image", widget: "image", required: false }
 
-  - name: "programs"
-    label: "Program Belajar"
+  - name: "program_categories"
+    label: "Program - Foto Kategori"
     files:
-      - name: "programs"
-        label: "Daftar Program"
-        file: "data/programs.json"
+      - name: "program-categories"
+        label: "Foto & Ringkasan 4 Kategori Jenjang"
+        file: "data/program-categories.json"
         fields:
-          - label: "Program"
+          - label: "TK / PAUD"
+            name: "tk_paud"
+            widget: "object"
+            fields:
+              - { label: "Foto", name: "image", widget: "image", required: false }
+              - { label: "Nama", name: "name", widget: "string" }
+              - { label: "Deskripsi Singkat", name: "desc", widget: "text" }
+              - { label: "Jadwal Pertemuan", name: "meeting", widget: "string" }
+              - { label: "Durasi", name: "duration", widget: "string" }
+          - label: "SD"
+            name: "sd"
+            widget: "object"
+            fields:
+              - { label: "Foto", name: "image", widget: "image", required: false }
+              - { label: "Nama", name: "name", widget: "string" }
+              - { label: "Deskripsi Singkat", name: "desc", widget: "text" }
+              - { label: "Jadwal Pertemuan", name: "meeting", widget: "string" }
+              - { label: "Durasi", name: "duration", widget: "string" }
+          - label: "SMP"
+            name: "smp"
+            widget: "object"
+            fields:
+              - { label: "Foto", name: "image", widget: "image", required: false }
+              - { label: "Nama", name: "name", widget: "string" }
+              - { label: "Deskripsi Singkat", name: "desc", widget: "text" }
+              - { label: "Jadwal Pertemuan", name: "meeting", widget: "string" }
+              - { label: "Durasi", name: "duration", widget: "string" }
+          - label: "SMA"
+            name: "sma"
+            widget: "object"
+            fields:
+              - { label: "Foto", name: "image", widget: "image", required: false }
+              - { label: "Nama", name: "name", widget: "string" }
+              - { label: "Deskripsi Singkat", name: "desc", widget: "text" }
+              - { label: "Jadwal Pertemuan", name: "meeting", widget: "string" }
+              - { label: "Durasi", name: "duration", widget: "string" }
+
+  - name: "program_tk_paud"
+    label: "Program - Detail TK/PAUD"
+    files:
+      - name: "program-tk-paud"
+        label: "Isi Halaman Program TK/PAUD"
+        file: "data/program-tk-paud.json"
+        fields:
+          - { label: "Judul Halaman", name: "title", widget: "string" }
+          - { label: "Deskripsi Pembuka", name: "intro", widget: "text" }
+          - label: "Daftar Program"
             name: "programs"
             widget: "list"
-            summary: "{{fields.title}} — {{fields.price}}"
+            summary: "{{fields.name}}"
             fields:
-              - { label: "Jenjang (contoh: SD, TK–SMP, dst)", name: "jenjang", widget: "string" }
-              - { label: "Nama Program", name: "title", widget: "string" }
-              - label: "Rincian (jadwal, mata pelajaran, dll)"
-                name: "details"
+              - { label: "Nama Program", name: "name", widget: "string" }
+              - label: "Poin Fokus/Materi"
+                name: "focus"
                 widget: "list"
-                field: { label: "Baris", name: "line", widget: "string" }
-              - { label: "Harga", name: "price", widget: "string", hint: "Contoh: Rp195.000" }
-              - { label: "Satuan Harga", name: "price_unit", widget: "string", hint: "Contoh: / bulan atau / 1,5 jam" }
-              - { label: "Catatan Tambahan", name: "note", widget: "string", required: false, hint: "Contoh: + biaya tambahan (kosongkan jika tidak ada)" }
+                field: { label: "Poin", name: "item", widget: "string" }
+          - { label: "Paket 1 - Frekuensi", name: "paket1_freq", widget: "string", hint: "Contoh: 1× / minggu" }
+          - { label: "Paket 1 - Durasi", name: "paket1_dur", widget: "string" }
+          - { label: "Paket 1 - Harga", name: "paket1_price", widget: "string" }
+          - { label: "Paket 2 - Frekuensi", name: "paket2_freq", widget: "string", hint: "Contoh: 2× / minggu" }
+          - { label: "Paket 2 - Durasi", name: "paket2_dur", widget: "string" }
+          - { label: "Paket 2 - Harga", name: "paket2_price", widget: "string" }
+
+  - name: "program_sd"
+    label: "Program - Detail SD"
+    files:
+      - name: "program-sd"
+        label: "Isi Halaman Program SD"
+        file: "data/program-sd.json"
+        fields:
+          - { label: "Judul Halaman", name: "title", widget: "string" }
+          - { label: "Deskripsi Pembuka", name: "intro", widget: "text" }
+          - label: "Daftar Program"
+            name: "programs"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Nama Program", name: "name", widget: "string" }
+              - label: "Poin Fokus/Materi"
+                name: "focus"
+                widget: "list"
+                field: { label: "Poin", name: "item", widget: "string" }
+          - { label: "Paket 1 - Frekuensi", name: "paket1_freq", widget: "string" }
+          - { label: "Paket 1 - Durasi", name: "paket1_dur", widget: "string" }
+          - { label: "Paket 1 - Harga", name: "paket1_price", widget: "string" }
+          - { label: "Paket 2 - Frekuensi", name: "paket2_freq", widget: "string" }
+          - { label: "Paket 2 - Durasi", name: "paket2_dur", widget: "string" }
+          - { label: "Paket 2 - Harga", name: "paket2_price", widget: "string" }
+
+  - name: "program_smp"
+    label: "Program - Detail SMP"
+    files:
+      - name: "program-smp"
+        label: "Isi Halaman Program SMP"
+        file: "data/program-smp.json"
+        fields:
+          - { label: "Judul Halaman", name: "title", widget: "string" }
+          - { label: "Deskripsi Pembuka", name: "intro", widget: "text" }
+          - label: "Daftar Program"
+            name: "programs"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Nama Program", name: "name", widget: "string" }
+              - label: "Poin Fokus/Materi"
+                name: "focus"
+                widget: "list"
+                field: { label: "Poin", name: "item", widget: "string" }
+          - { label: "Paket 1 - Frekuensi", name: "paket1_freq", widget: "string" }
+          - { label: "Paket 1 - Durasi", name: "paket1_dur", widget: "string" }
+          - { label: "Paket 1 - Harga", name: "paket1_price", widget: "string" }
+          - { label: "Paket 2 - Frekuensi", name: "paket2_freq", widget: "string" }
+          - { label: "Paket 2 - Durasi", name: "paket2_dur", widget: "string" }
+          - { label: "Paket 2 - Harga", name: "paket2_price", widget: "string" }
+
+  - name: "program_sma"
+    label: "Program - Detail SMA"
+    files:
+      - name: "program-sma"
+        label: "Isi Halaman Program SMA"
+        file: "data/program-sma.json"
+        fields:
+          - { label: "Judul Halaman", name: "title", widget: "string" }
+          - { label: "Deskripsi Pembuka", name: "intro", widget: "text" }
+          - label: "Daftar Program"
+            name: "programs"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Nama Program", name: "name", widget: "string" }
+              - label: "Poin Fokus/Materi"
+                name: "focus"
+                widget: "list"
+                field: { label: "Poin", name: "item", widget: "string" }
+          - { label: "Paket 1 - Frekuensi", name: "paket1_freq", widget: "string" }
+          - { label: "Paket 1 - Durasi", name: "paket1_dur", widget: "string" }
+          - { label: "Paket 1 - Harga", name: "paket1_price", widget: "string" }
+          - { label: "Paket 2 - Frekuensi", name: "paket2_freq", widget: "string" }
+          - { label: "Paket 2 - Durasi", name: "paket2_dur", widget: "string" }
+          - { label: "Paket 2 - Harga", name: "paket2_price", widget: "string" }
+          - label: "Program Persiapan Khusus (TKA, UTBK-SNBT, dll)"
+            name: "khusus"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Nama Program", name: "name", widget: "string" }
+              - { label: "Deskripsi Singkat", name: "desc", widget: "string" }
+              - label: "Materi"
+                name: "materi"
+                widget: "list"
+                field: { label: "Poin", name: "item", widget: "string" }
+              - { label: "Frekuensi Pertemuan", name: "freq", widget: "string", hint: "Contoh: 2× per minggu" }
+              - { label: "Durasi", name: "dur", widget: "string", hint: "Contoh: 1,5 jam setiap pertemuan" }
+              - { label: "Harga", name: "price", widget: "string" }
 
   - name: "settings"
     label: "Pengaturan Halaman"
@@ -105,7 +245,7 @@ collections:
               - { label: "Label Kecil di Atas Judul", name: "eyebrow", widget: "string" }
               - { label: "Judul Utama", name: "title", widget: "string" }
               - { label: "Kata yang Ditonjolkan (Emas)", name: "title_highlight", widget: "string", hint: "Harus sama persis dengan salah satu kata di Judul Utama" }
-              - { label: "Deskripsi Singkat", name: "lead", widget: "text" }
+              - { label: "Deskripsi Singkat", name: "lead", widget: "text", hint: "Setiap kali Anda tekan Enter, itu akan jadi paragraf baru di website." }
               - { label: "Foto Latar Belakang Hero", name: "hero_image", widget: "image", required: false, hint: "Foto besar di paling atas halaman. Jika Video diisi, video akan tampil menggantikan foto ini." }
               - { label: "Video Latar Belakang Hero (opsional)", name: "hero_video", widget: "file", required: false, hint: "Upload video (format mp4, ukuran kecil disarankan). Jika diisi, video akan tampil menggantikan foto latar." }
               - { label: "Foto di Kartu Sambutan", name: "welcome_image", widget: "image", required: false, hint: "Foto yang muncul di kartu 'Selamat Datang'" }

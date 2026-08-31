@@ -1,0 +1,30 @@
+{
+  "tk_paud": {
+    "image": "",
+    "name": "TK / PAUD",
+    "desc": "Program belajar menyenangkan untuk membangun kemampuan dasar dan kesiapan belajar anak.",
+    "meeting": "1× / 2× per minggu",
+    "duration": "1,5 Jam / Pertemuan"
+  },
+  "sd": {
+    "image": "",
+    "name": "SD",
+    "desc": "Program belajar terarah untuk memperkuat pemahaman, nilai, dan prestasi siswa.",
+    "meeting": "1× / 2× per minggu",
+    "duration": "1,5 Jam / Pertemuan"
+  },
+  "smp": {
+    "image": "",
+    "name": "SMP",
+    "desc": "Program belajar untuk memperkuat pemahaman materi dan meningkatkan prestasi akademik.",
+    "meeting": "1× / 2× per minggu",
+    "duration": "1,5 Jam / Pertemuan"
+  },
+  "sma": {
+    "image": "",
+    "name": "SMA",
+    "desc": "Program belajar untuk meningkatkan prestasi, persiapan ujian, TKA, dan masuk perguruan tinggi.",
+    "meeting": "1× / 2× per minggu",
+    "duration": "1,5 Jam / Pertemuan"
+  }
+}

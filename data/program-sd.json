@@ -1,0 +1,29 @@
+{
+  "title": "PROGRAM SD",
+  "intro": "Program belajar terarah untuk memperkuat pemahaman, nilai, dan prestasi siswa.",
+  "programs": [
+    {
+      "name": "SD Smart",
+      "focus": ["Matematika", "Bahasa Indonesia", "Bahasa Inggris", "IPA", "IPS", "Pendidikan Pancasila"]
+    },
+    {
+      "name": "SD Boost",
+      "focus": ["Matematika", "Bahasa Indonesia", "Bahasa Inggris", "IPA", "IPS", "Pendidikan Pancasila"]
+    },
+    {
+      "name": "SD Focus",
+      "focus": ["Matematika", "IPA", "Pemahaman konsep", "Logika", "Pemecahan masalah", "Soal HOTS"]
+    },
+    {
+      "name": "SD Exam Ready",
+      "focus": ["Persiapan PTS", "Persiapan PAS", "Ujian sekolah", "Review materi", "Latihan soal", "Simulasi"]
+    }
+  ],
+  "paket1_freq": "1× / minggu",
+  "paket1_dur": "1,5 Jam / Pertemuan",
+  "paket1_price": "Rp95.000/bulan",
+  "paket2_freq": "2× / minggu",
+  "paket2_dur": "1,5 Jam / Pertemuan",
+  "paket2_price": "Rp195.000/bulan",
+  "khusus": []
+}
