@@ -1,33 +1,21 @@
 {
-  "paket1_dur": "1 Jam / Pertemuan",
-  "paket2_dur": "1 Jam / Pertemuan",
+  "title": "PROGRAM TK / PAUD",
   "intro": "Program belajar menyenangkan untuk membangun kemampuan dasar dan kesiapan belajar anak.",
-  "paket2_freq": "2× / minggu",
-  "paket1_freq": "1× / minggu",
   "programs": [
     {
       "name": "Calistung Ceria",
-      "focus": [
-        "Membaca",
-        "Menulis",
-        "Berhitung",
-        "Pengenalan huruf dan angka",
-        "Latihan konsentrasi"
-      ]
+      "focus": ["Membaca", "Menulis", "Berhitung", "Pengenalan huruf dan angka", "Latihan konsentrasi"]
     },
     {
       "name": "Siap SD",
-      "focus": [
-        "Membaca",
-        "Menulis",
-        "Berhitung",
-        "Bahasa Indonesia dasar",
-        "Kemandirian dan kesiapan belajar"
-      ]
+      "focus": ["Membaca", "Menulis", "Berhitung", "Bahasa Indonesia dasar", "Kemandirian dan kesiapan belajar"]
     }
   ],
+  "paket1_freq": "1× / minggu",
+  "paket1_dur": "1,5 Jam / Pertemuan",
   "paket1_price": "Rp95.000/bulan",
+  "paket2_freq": "2× / minggu",
+  "paket2_dur": "1,5 Jam / Pertemuan",
   "paket2_price": "Rp195.000/bulan",
-  "title": "PROGRAM TK / PAUD",
   "khusus": []
 }

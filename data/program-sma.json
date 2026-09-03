@@ -1,72 +1,35 @@
 {
-  "paket1_dur": "1,5 Jam / Pertemuan",
-  "paket2_dur": "1,5 Jam / Pertemuan",
+  "title": "PROGRAM SMA",
   "intro": "Program belajar untuk meningkatkan prestasi, persiapan ujian, TKA, dan masuk perguruan tinggi.",
-  "paket2_freq": "2× / minggu",
-  "paket1_freq": "1× / minggu",
   "programs": [
     {
       "name": "SMA Smart",
-      "focus": [
-        "Matematika",
-        "Bahasa Indonesia",
-        "Bahasa Inggris",
-        "Fisika",
-        "Kimia",
-        "Biologi",
-        "Mata pelajaran sesuai kebutuhan"
-      ]
+      "focus": ["Matematika", "Bahasa Indonesia", "Bahasa Inggris", "Fisika", "Kimia", "Biologi", "Mata pelajaran sesuai kebutuhan"]
     },
     {
       "name": "SMA Boost",
-      "focus": [
-        "Penguatan konsep",
-        "Pendalaman materi",
-        "Latihan soal",
-        "Pembahasan soal",
-        "Evaluasi perkembangan"
-      ]
+      "focus": ["Penguatan konsep", "Pendalaman materi", "Latihan soal", "Pembahasan soal", "Evaluasi perkembangan"]
     },
     {
       "name": "SMA Focus",
-      "focus": [
-        "Matematika",
-        "Fisika",
-        "Kimia",
-        "Biologi",
-        "Bahasa Inggris",
-        "Bahasa Indonesia",
-        "Mata pelajaran lain sesuai kebutuhan"
-      ]
+      "focus": ["Matematika", "Fisika", "Kimia", "Biologi", "Bahasa Inggris", "Bahasa Indonesia", "Mata pelajaran lain sesuai kebutuhan"]
     },
     {
       "name": "SMA Exam Ready",
-      "focus": [
-        "Persiapan PTS",
-        "Persiapan PAS",
-        "Ujian",
-        "Review materi",
-        "Latihan soal",
-        "Simulasi"
-      ]
+      "focus": ["Persiapan PTS", "Persiapan PAS", "Ujian", "Review materi", "Latihan soal", "Simulasi"]
     }
   ],
+  "paket1_freq": "1× / minggu",
+  "paket1_dur": "1,5 Jam / Pertemuan",
   "paket1_price": "Rp150.000/bulan",
-  "paket2_price": "Rp295.000/bulan",
-  "title": "PROGRAM SMA",
+  "paket2_freq": "2× / minggu",
+  "paket2_dur": "1,5 Jam / Pertemuan",
+  "paket2_price": "Rp300.000/bulan",
   "khusus": [
     {
       "name": "TKA Ready",
       "desc": "Persiapan Tes Kemampuan Akademik.",
-      "materi": [
-        "Literasi Bahasa Indonesia",
-        "Literasi Bahasa Inggris",
-        "Numerasi",
-        "Penalaran",
-        "Penalaran Matematika",
-        "Latihan soal",
-        "Simulasi TKA"
-      ],
+      "materi": ["Literasi Bahasa Indonesia", "Literasi Bahasa Inggris", "Numerasi", "Penalaran", "Penalaran Matematika", "Latihan soal", "Simulasi TKA"],
       "freq": "2× per minggu",
       "dur": "1,5 jam setiap pertemuan",
       "price": "Rp400.000/bulan"
@@ -74,16 +37,7 @@
     {
       "name": "Campus Ready",
       "desc": "Persiapan UTBK-SNBT.",
-      "materi": [
-        "Penalaran Umum",
-        "Pengetahuan dan Pemahaman Umum",
-        "Pemahaman Bacaan dan Menulis",
-        "Pengetahuan Kuantitatif",
-        "Literasi Bahasa Indonesia",
-        "Literasi Bahasa Inggris",
-        "Penalaran Matematika",
-        "Simulasi UTBK-SNBT"
-      ],
+      "materi": ["Penalaran Umum", "Pengetahuan dan Pemahaman Umum", "Pemahaman Bacaan dan Menulis", "Pengetahuan Kuantitatif", "Literasi Bahasa Indonesia", "Literasi Bahasa Inggris", "Penalaran Matematika", "Simulasi UTBK-SNBT"],
       "freq": "2× per minggu",
       "dur": "1,5 jam setiap pertemuan",
       "price": "Rp400.000/bulan"
